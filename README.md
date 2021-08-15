@@ -120,19 +120,22 @@
 
 ![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/11.jpg)
 
+
+![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/13.jpg)
+
 ## Model Explanation
 
 > 论文给出了Fi-GNN在边和节点的attention weights，具体如下：
 
 ### Attentional Edge weights
 
-![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/13.jpg)
 
+![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/14.jpg)
 
 ### Attentional Node weights
 
 
-![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/14.jpg)
+![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/15.jpg)
 
 
 
