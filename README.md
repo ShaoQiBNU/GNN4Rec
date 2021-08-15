@@ -26,15 +26,16 @@
 >
 > 第三部分：整合图信息预测；
 
-img
+
+![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/1.png)
 
 ### 第一部分
 
 > 与传统的ctr模型结构相同，稀疏特征经过embedding layer转成embedding vector，之后利用Multi-head Self-attention Layer建模特征pairs的关系，得到特征表示，具体如下：
 
-img2
+![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/2.jpg)
 
-Img3
+![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/3.jpg)
 
 ### 第二部分
 
@@ -58,7 +59,7 @@ Img3
 
 > 在相互作用步骤t，每个节点将聚合来自邻居的状态信息，节点<a href="https://www.codecogs.com/eqnedit.php?latex=n_{i}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?n_{i}" title="n_{i}" /></a>的汇总信息为其邻居节点变换后的状态信息之和，具体公式如下：
 
-img
+![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/4.jpg)
 
 > 式中，<a href="https://www.codecogs.com/eqnedit.php?latex=W_{p}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?W_{p}" title="W_{p}" /></a>是转换函数，<a href="https://www.codecogs.com/eqnedit.php?latex=A\in&space;\mathbb{R}^{m*m}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?A\in&space;\mathbb{R}^{m*m}" title="A\in \mathbb{R}^{m*m}" /></a>是包含边权重的邻接矩阵。例如，<a href="https://www.codecogs.com/eqnedit.php?latex=A[n_{j},n_{i}]" target="_blank"><img src="https://latex.codecogs.com/svg.latex?A[n_{j},n_{i}]" title="A[n_{j},n_{i}]" /></a>是节点<a href="https://www.codecogs.com/eqnedit.php?latex=n_{j}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?n_{j}" title="n_{j}" /></a>到<a href="https://www.codecogs.com/eqnedit.php?latex=n_{i}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?n_{i}" title="n_{i}" /></a>的边的权值，可以反映它们之间相互作用的重要性。显然，转换函数和邻接矩阵决定了节点间的相互作用。由于每条边上的相互作用应该是不同的，我们的目标是实现边的相互作用，这需要每条边有一个唯一的权值和变换函数。转换函数和邻接矩阵的生成方式如下：
 
@@ -68,7 +69,7 @@ img
 >
 > 为了推断出不同节点之间交互作用的重要性，论文提出通过一个注意机制来学习边权值：根据节点的初始状态计算边权值，具体如下：
 
-img
+![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/5.jpg)
 
 ###### (2) Edge-wise Transformation
 
@@ -76,7 +77,7 @@ img
 >
 > 为了减少时间和空间的复杂性，同时实现边向变换，论文为每个节点分配了两个矩阵<a href="https://www.codecogs.com/eqnedit.php?latex=W_{out}^{i}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?W_{out}^{i}" title="W_{out}^{i}" /></a>和<a href="https://www.codecogs.com/eqnedit.php?latex=W_{in}^{i}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?W_{in}^{i}" title="W_{in}^{i}" /></a>，转换矩阵的构造过程如下：
 
-img
+![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/6.jpg)
 
 ##### State Update
 
@@ -84,19 +85,19 @@ img
 
 ###### (1) State update via GRU
 
-img
+![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/7.jpg)
 
 ###### (2) State update via Residual Connections
 
 > 论文引入了残差连接来随着GRU更新状态，这可以促进低阶特征重用和梯度反向传播，如下：
 
-img
+![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/8.jpg)
 
 ### 第三部分
 
 > 每个字段节点的最终状态捕获了全局信息。换句话说，这些域节点是邻居感知的。论文分别对每个领域的最终状态进行评分，并使用一个注意力机制来衡量它们对整体预测的影响，具体如下：
 
-img
+![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/9.jpg)
 
 ## 实验结果
 
@@ -109,13 +110,14 @@ img
 > - 高阶模型的效果均优于一阶和二阶，这表明CTR建模中二阶特征交互是不够的
 > - Fi-GNN模型效果最好，这主要归因于在节点的交互中，图结构化表达的优越能力和GNN的有效性。
 
-img
+![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/10.jpg)
 
 ### Alation study
 
 > 论文在Fi-GNN的做了不同结构的abltaion study，具体如下：
 
-img
+
+![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/11.jpg)
 
 ## Model Explanation
 
@@ -123,11 +125,12 @@ img
 
 ### Attentional Edge weights
 
-img
+![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/12.jpg)
 
 ### Attentional Node weights
 
 
+![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/13.jpg)
 
 
 
