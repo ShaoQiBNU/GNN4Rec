@@ -116,6 +116,7 @@
 
 > 论文在Fi-GNN的做了不同结构的abltaion study，具体如下：
 
+![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/12.jpg)
 
 ![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/11.jpg)
 
@@ -125,12 +126,13 @@
 
 ### Attentional Edge weights
 
-![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/12.jpg)
+![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/13.jpg)
+
 
 ### Attentional Node weights
 
 
-![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/13.jpg)
+![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/14.jpg)
 
 
 
