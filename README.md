@@ -132,10 +132,16 @@
 
 ![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/14.jpg)
 
+
+![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/15.jpg)
+
 ### Attentional Node weights
 
 
-![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/15.jpg)
+![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/16.jpg)
+
+
+![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/17.jpg)
 
 
 
