@@ -45,6 +45,9 @@
 
 > 基于GGNN，论文设计了基于特征图的节点交互模型 Fi-GNN，它能够以灵活和显式的方式对交互进行建模。
 
+
+![image](https://github.com/ShaoQiBNU/GNN4Rec/blob/main/img/18.jpg)
+
 > 在Fi-GNN中，每个节点<a href="https://www.codecogs.com/eqnedit.php?latex=n_{i}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?n_{i}" title="n_{i}" /></a>对应着隐藏状态向量<a href="https://www.codecogs.com/eqnedit.php?latex=h_{i}^{t}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?h_{i}^{t}" title="h_{i}^{t}" /></a>，图的状态由这些节点状态组成：
 >
 > <a href="https://www.codecogs.com/eqnedit.php?latex=H^{t}=[h_{1}^{t},&space;h_{2}^{t},&space;h_{3}^{t},...,h_{m}^{t}]" target="_blank"><img src="https://latex.codecogs.com/svg.latex?H^{t}=[h_{1}^{t},&space;h_{2}^{t},&space;h_{3}^{t},...,h_{m}^{t}]" title="H^{t}=[h_{1}^{t}, h_{2}^{t}, h_{3}^{t},...,h_{m}^{t}]" /></a>
